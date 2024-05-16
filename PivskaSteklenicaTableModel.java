@@ -49,7 +49,7 @@ public class PivskaSteklenicaTableModel extends DefaultTableModel {
 		// Ustvarimo seznam objektov za dodajanje v tabelo
 		Object[] vrstica = new Object[] {ps.getZnamka(), ps.getStopnjaAlkohola()};
 		
-		// Dodamo vrstico v tabelo
+		// Dodamo vrstico v tabelo GUI
 		addRow(vrstica);
 		
 	}
