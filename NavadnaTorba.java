@@ -5,7 +5,7 @@
  * Delo z navadnimi torbami
  * 
  * @author Taja Brojan
- * @version Vaja 32
+ * @version Vaja 35
  */
 
 /**
@@ -18,13 +18,13 @@ public class NavadnaTorba extends Torba implements Denar {
 	private String znamka;
 	private double steviloZepov;
 	
-	// Statična lastnost, ki je enaka vsem pivskim steklenicam (vsem objektom razreda)
+	// Statična lastnost, ki je enaka vsem navadnim torbam (vsem objektom razreda)
 	private static String material = "Poliuretan"; // Vse navadne torbe so iz poliuretana
 	
-	/** Javni konstruktor za ustvarjanje novega objekta tipa/razreda PivskaSteklenica
-	 * @param z Znamka piva
-	 * @param k Kapaciteta v mililitrih
-	 * @return Nov objekt tipa pivska steklenica
+	/** Javni konstruktor za ustvarjanje novega objekta tipa/razreda NavadnaTorba
+	 * @param z Znamka torbe
+	 * @param k Kapaciteta
+	 * @return Nov objekt tipa navadna torba
 	 */
 	public NavadnaTorba(String z, int k, int kv) {
 		
@@ -45,7 +45,7 @@ public class NavadnaTorba extends Torba implements Denar {
 		// Inicializiramo še dodatne lastnosti podrazreda
 		znamka = z;
 		
-		// Inicializiramo privzeto stopnjo alkohola
+		// Inicializiramo privzeto stevilo žepov
 		steviloZepov = sz;
 		
 		// Izpišemo podatke
@@ -54,12 +54,21 @@ public class NavadnaTorba extends Torba implements Denar {
 	}
 	
 	
-	/** Javna metoda, ki vrne stopnjo alkohola
-	 * @return Stopnja alkohola
+	/** Javna metoda, ki vrne število žepov
+	 * @return Število žepov
 	 */
 	 public double getSteviloZepov(){
 		
-		// Vrnemo stopnjo alkohola
+		// Vrnemo število žepov
 		return steviloZepov;	 
+	 }
+	 
+	 /** Javna getter metoda, ki vrne znamko torbe
+	 * @return Znamka torbe
+	 */
+	public String getZnamka() {
+		
+		// Vrnemo znamko
+		return znamka;
 	 }
 }
